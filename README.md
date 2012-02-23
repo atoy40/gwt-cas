@@ -9,7 +9,11 @@ Add the CAS filters in you web.xml except the AuthenticationFilter.
   &lt;filter-class&gt;org.jasig.cas.client.validation.Cas10TicketValidationFilter&lt;/filter-class&gt;
   &lt;init-param&gt;
     &lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;
-    &lt;param-value&gt;&lt;/param-value&gt;
+    &lt;param-value&gt;https://cas.company.com&lt;/param-value&gt;
+  &lt;/init-param&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;serverName&lt;/param-name&gt;
+    &lt;param-value&gt;http://www.company.com&lt;/param-value&gt;
   &lt;/init-param&gt;
 &lt;/filter&gt;
 &lt;filter&gt;
@@ -24,8 +28,12 @@ Add the CAS filters in you web.xml except the AuthenticationFilter.
   &lt;filter-name&gt;GWT RequestFactory CAS Auth Filter&lt;/filter-name&gt;
   &lt;filter-class&gt;fr.univpau.gwt.cas.server.CasFilter&lt;/filter-class&gt;
   &lt;init-param&gt;
-    &lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;
-    &lt;param-value&gt;&lt;/param-value&gt;
+    &lt;param-name&gt;serverName&lt;/param-name&gt;
+    &lt;param-value&gt;https://cas.company.com/MyGwtApp/MyGwtApp.html&lt;/param-value&gt;
+  &lt;/init-param&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;casServerLoginUrl&lt;/param-name&gt;
+    &lt;param-value&gt;https://cas.company.com/login&lt;/param-value&gt;
   &lt;/init-param&gt;
 &lt;/filter&gt;
 
