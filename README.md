@@ -4,47 +4,47 @@
 Add the CAS filters in you web.xml except the AuthenticationFilter.
 
 <pre>
-<filter>
-  <filter-name>CAS Validation Filter</filter-name>
-  <filter-class>org.jasig.cas.client.validation.Cas10TicketValidationFilter</filter-class>
-  <init-param>
-    <param-name>casServerUrlPrefix</param-name>
-    <param-value></param-value>
-  </init-param>
-</filter>
-<filter>
-  <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-  <filter-class>org.jasig.cas.client.util.HttpServletRequestWrapperFilter</filter-class>
-</filter>
-<filter>
-  <filter-name>CAS Assertion Thread Local Filter</filter-name>
-  <filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>
-</filter>
-<filter>
-  <filter-name>GWT RequestFactory CAS Auth Filter</filter-name>
-  <filter-class>fr.univpau.gwt.cas.server.CasFilter</filter-class>
-  <init-param>
-    <param-name>casServerUrlPrefix</param-name>
-    <param-value></param-value>
-  </init-param>
-</filter>
+&lt;filter&gt;
+  &lt;filter-name&gt;CAS Validation Filter&lt;/filter-name&gt;
+  &lt;filter-class&gt;org.jasig.cas.client.validation.Cas10TicketValidationFilter&lt;/filter-class&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;
+    &lt;param-value&gt;&lt;/param-value&gt;
+  &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter&gt;
+  &lt;filter-name&gt;CAS HttpServletRequest Wrapper Filter&lt;/filter-name&gt;
+  &lt;filter-class&gt;org.jasig.cas.client.util.HttpServletRequestWrapperFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter&gt;
+  &lt;filter-name&gt;CAS Assertion Thread Local Filter&lt;/filter-name&gt;
+  &lt;filter-class&gt;org.jasig.cas.client.util.AssertionThreadLocalFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter&gt;
+  &lt;filter-name&gt;GWT RequestFactory CAS Auth Filter&lt;/filter-name&gt;
+  &lt;filter-class&gt;fr.univpau.gwt.cas.server.CasFilter&lt;/filter-class&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;
+    &lt;param-value&gt;&lt;/param-value&gt;
+  &lt;/init-param&gt;
+&lt;/filter&gt;
 
-<filter-mapping>
-   <filter-name>CAS Validation Filter</filter-name>
-   <url-pattern>/*</url-pattern>
-</filter-mapping>
-<filter-mapping>
-    <filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
-    <url-pattern>/*</url-pattern>
-</filter-mapping>
-<filter-mapping>
-    <filter-name>CAS Assertion Thread Local Filter</filter-name>
-    <url-pattern>/*</url-pattern>
-</filter-mapping>
-<filter-mapping>
-    <filter-name>GWT RequestFactory CAS Auth Filter</filter-name>
-    <url-pattern>/gwtRequest</url-pattern>
-</filter-mapping>
+&lt;filter-mapping&gt;
+   &lt;filter-name&gt;CAS Validation Filter&lt;/filter-name&gt;
+   &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;CAS HttpServletRequest Wrapper Filter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;CAS Assertion Thread Local Filter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;GWT RequestFactory CAS Auth Filter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/gwtRequest&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
 </pre>
 
 ### Client
