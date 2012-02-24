@@ -68,6 +68,18 @@ MyRequestFactory rf = GWT.create(MyRequestFactory.class);
 rf.initialize(bus, new CasRequestTransport());
 </pre>
 
+Then you can use it as a new RequestFactory request :
+<pre>
+CasRequest request = rf.casRequest();
+request.getCurrentUser().to(new Receiver<CasUserProxy>() {
+    @Override
+    public void onSuccess(CasUserProxy user) {
+        Window.alert("user is " + user.getLogin());
+    }
+}).
+request.fire();
+</pre>
+
 # Maven repositories
 
 Latest release (for GWT 2.4):
