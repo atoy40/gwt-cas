@@ -1,7 +1,7 @@
 # Usage
 
 ### Server
-Add the CAS filters in you web.xml except the AuthenticationFilter.
+Add the CAS filters in you web.xml except the `AuthenticationFilter`.
 
 <pre>
 &lt;filter&gt;
@@ -62,6 +62,7 @@ Extends your own RequestFactory interface with MakeCasRequest :
 public interface MyRequestFactory extends MakeCasRequest {
 }
 </pre>
+
 Use the when as RequestTransport when you initialize your RF instance :
 <pre>
 MyRequestFactory rf = GWT.create(MyRequestFactory.class);
@@ -79,6 +80,8 @@ request.getCurrentUser().to(new Receiver<CasUserProxy>() {
 }).
 request.fire();
 </pre>
+
+You can also use the simple but embedded widget `LoginWidget`
 
 # Maven repositories
 
