@@ -32,9 +32,13 @@
   <build>
     <resources>
       <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
         <directory>src/main/java</directory>
         <includes>
           <include>fr/univpau/gwt/cas/client/*</include>
+          <include>fr/univpau/gwt/cas/shared/*</include>
         </includes>
       </resource>
     </resources>
