@@ -29,7 +29,7 @@ Add the CAS filters in you web.xml except the `AuthenticationFilter`.
   &lt;filter-class&gt;fr.univpau.gwt.cas.server.CasFilter&lt;/filter-class&gt;
   &lt;init-param&gt;
     &lt;param-name&gt;serverName&lt;/param-name&gt;
-    &lt;param-value&gt;https://cas.company.com/MyGwtApp/MyGwtApp.html&lt;/param-value&gt;
+    &lt;param-value&gt;https://www.company.com/MyGwtApp/MyGwtApp.html&lt;/param-value&gt;
   &lt;/init-param&gt;
   &lt;init-param&gt;
     &lt;param-name&gt;casServerLoginUrl&lt;/param-name&gt;
@@ -59,11 +59,11 @@ Add the CAS filters in you web.xml except the `AuthenticationFilter`.
 Add `<inherits name="fr.univpau.gwt.cas.Cas"/>` to your GWT XML module descriptor.
 Extends your own RequestFactory interface with MakeCasRequest :
 <pre>
-public interface MyRequestFactory extends MakeCasRequest {
+public interface MyRequestFactory extends RequestFactory, MakeCasRequest {
 }
 </pre>
 
-Use the when as RequestTransport when you initialize your RF instance :
+Use `CasRequestTransport` as RequestTransport when you initialize your RF instance :
 <pre>
 MyRequestFactory rf = GWT.create(MyRequestFactory.class);
 rf.initialize(bus, new CasRequestTransport());
